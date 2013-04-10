@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>Limada</title>
+    <link rel="stylesheet" media="screen" href="LimadaDoku.css" />
+</head>
+<body>
+    <div class="header_container">
+        <div class="header">
+            <h1>Limada</h1>
+        </div>
+    </div>
+    <div class="content">
+	<h2>limada::concept</h2>
+<p>is an application to draw, edit and store concept maps. A concept map is a diagram showing the relationships among concepts. They are graphical tools for organizing and representing knowledge. They include concepts, usually enclosed in circles or boxes of some type, and relationships between concepts indicated by a connecting line linking two concepts.</p>
+<p>Concepts can be connected with labeled arrows. The relationship between concepts can be articulated in linking phrases, e.g., "gives rise to", "results in", "is required by," or "contributes to".</p>
+<p>Concept maps are similar to mindmaps, but give more freedom, as mindmaps are often restricted to radial hierarchies and tree structures.</p>
+        <div style="float: right; margin-left: 1em; margin-bottom: 1em; margin-top: 1em">
+            <img src="ExampleImages/LimadaCloud.png" style="width: 546px" />
+        </div>
+<p><b>Features</b></p>
+* Add concepts by typing or drag and drop<br>
+* Link your concepts, and label them<br>
+* You can link a concept with as many other concepts you need. You can link concepts with other links<br>
+* Move your concepts around as you like and as you need it. No restriction for placing or ordering!<br>
+* Your concept-map is stored in a database. You can make very big maps with many of concepts and links.<br>
+* Assign different shapes to a concept<br>
+* Work with a splitted screen: several views or sub-views of the same concept-map.<br>
+* Organise different views of your concept maps as sheets and store them in the database<br>
+* Store text and images in the database and connect them with concepts
+* Export your map as an image<br>
+<p><b>Future</b></p>
+<p>Limada will be extended with content management (create, edit, manage, search and publish various kinds of digital media and electronic text) and document management (scanning and storing of paper documents) features in the next releases.<p>
+<h2>limada::framework</h2>
+        <p>Limada (Linked Marked Data) is a framework for managing relationships of data in non-hierarchical structures. It is suitable for data sets where the individual elements are interconnected in complex ways. The philosophy behind is that information is not in the data, but in the relationship between the data.</p>
+        <p>The basic data structures are things, links and graphs. </p>
+        <p>A thing holds a piece of information, such as text or numerical data.</p>
+        <p>A link is a triple of things: it connects a root with a leaf, and a marker provides information about the character of the connection, the "why are root and leaf connected". A link is a thing by itself, so links can be connected with other links ("link on link") and used as markers as well.</p>
+        <p>A graph is a container of things and links. It provides access to the relations of
+            things.</p>
+        <p>Limada has persistance layers for storing things and links in databases, and user interface components for visualizing the relationships between the data.</p>
+        <p>Limada's links are typed links, the marker of the link represents the semantic relations between the data. So you are able to build very free form variants of a semantic network.</p>
+        <p>It is no ontology framework, as it lacks the class-features (inheritance etc.) and
+            don&rsquo;t support any ontological language. It is no semantic web framework, as
+            it has no description logics (as by now).</p>
+        <p>Limada is written in c# and published under the GPL.</p>
+    </div>
+    <div class="menu">
+        <div class="mp"><a href="Application/LimadaConceptApp.html">Application</a></div>
+        <div class="mp"><a href="Limaki/ArchitectureOverview.html">Architecture</a></div>
+        <div class="mp"><a href="http://sourceforge.net/project/showfiles.php?group_id=196119&package_id=231743">Download</a></div>
+        <div class="mp"><a href="https://github.com/limada">Github Profile</a></div>
+        <div class="mp"><a href="Developers.html">Developers</a></div>
+    </div>
+    <div class="footer_container">
+        <div class="footer" style="background-color: white;">
+        <a href="http://sourceforge.net"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=196119&amp;type=2" alt="SourceForge.net Logo" border="0" height="37" width="125"></a>
+        </div>
+    </div>
+</body>
+</html>

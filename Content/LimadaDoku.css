@@ -1,0 +1,242 @@
+body
+{
+	vertical-align: middle;
+	direction: ltr;
+	font-style: normal;
+	font-family: Sans-Serif;
+	letter-spacing: normal;
+	text-align: left;
+	
+}
+
+H1
+{
+	margin-top: 1px;
+	font-weight: bolder;
+	font-size: x-large;
+	line-height: 2em;
+	color: #666666;
+}
+
+P
+{
+	margin-left: 2em;
+}
+
+code
+{
+	font-family: Monospace;
+	font-size: large;
+	font-weight:bold;
+	color: #006666;
+}
+.source
+{
+	font-size: medium;
+	margin-left: 2em;
+	font-family: Monospace;
+	color: #006666;
+	border-right: #339966 1px dashed;
+	border-top: #339966 1px dashed;
+	border-left: #339966 1px dashed;
+	border-bottom: #339966 1px dashed;
+	padding-right: 1em;
+	padding-left: 1em;
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+.code
+{
+	font-family: Monospace;
+	font-size: larger;
+	font-weight:bold;
+	color: #006666;
+}
+H2
+{
+	font-weight: bolder;
+	font-size: larger;
+	line-height: 2em;
+	color: #666666;
+}
+H3
+{
+	margin-left: 1em;
+	font-weight: bolder;
+	font-size: larger;
+	line-height: 1em;
+	color: #666666;
+	
+}
+H4
+{
+	margin-left: 1em;
+	font-weight: bolder;
+	font-size: medium;
+	line-height: 1em;
+	color: #666666;
+	
+}
+.header_container
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: left;
+	margin: 0;
+	height: 3em;
+	z-index: 3;
+	
+}
+
+.header
+{
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	z-index: 3;
+	margin: 0;
+	padding: 0.2em; /*background:white; does not work together with background:url*/
+	/*background:url(limadaIcon.png) no-repeat;*/
+	border-bottom: black thin dotted;
+}
+.content
+{
+	margin: 0;
+	padding-top: 4em;
+	padding-left: 9em;
+	padding-bottom: 4em;
+	padding-right: 1em;
+	z-index: 2;
+}
+.menu
+{
+	position: fixed;
+	top: 4em;
+	left: 0.5em;
+	width: 7em;
+	border-right: black thin dotted;
+	padding: .5em;
+	
+}
+.mp {
+	margin-left: 0em;
+	margin-top: 0.5em;
+}
+.keyboard {
+	background: light-grey;
+	margin:0.1em;
+	border:black thin outset;
+	padding:0.1em;
+}
+.footer_container
+{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: left;
+	margin: 0;
+	height: 2em;
+	z-index: 3;
+	border-top: black thin dotted;
+}
+.footer
+{
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-top: 0.2em; /*background:#efefef;*/
+	z-index: 3;
+	white-space:nowrap;
+}
+
+/* Nun für den MSIE */
+* html .header_container
+{
+	position: absolute;
+	width: 100%;
+	height: 0.01em;
+	/*position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: left;
+	margin: 0;
+	height: 2em;
+	z-index: 3;*/
+}
+* html .header
+{
+	height: 1%;
+	position: static;
+	padding: 0.01em;
+	/*background: white;
+	position: static;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 3;
+	margin: 0;
+	border-bottom: black thin dotted;
+	padding: 0.2em; /*background:white; does not work together with background:url*/
+	
+}
+* html H1
+{
+	line-height: 1em;
+	font-size: large;
+}
+* html .footer_container
+{
+	position: absolute;
+	height: 0.01em;
+	width: 100%;
+}
+* html .footer
+{
+	height: 1%;
+	position: static;
+	
+}
+*html code
+{
+	font-family: Monospace;
+	font-size: medium;
+	font-weight:normal;
+	color: #006666;
+}
+* html .menu
+{
+	position: absolute;
+	margin: 0;
+	
+}
+* html .content
+{
+	position: absolute;
+	top: 4em;
+	bottom: 5em;
+	left: 0;
+	right: 0;
+	height: 90%;
+	width: 100%;
+	overflow:scroll;
+
+}
+* html, * html body
+{
+	overflow: hidden;
+	bottom: 0;
+	height: 100%;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>Limada Thing</title>
+        <link rel="stylesheet" media="screen" href="../LimadaDoku.css" />
+</head>
+<body dir="ltr">
+    <div class="header_container">
+        <div class="header">
+            <h1>Things, Links and Graphs</h1>
+        </div>
+    </div>
+    <div class="content">
+        <p>A Thing is the base element of a Limada.ThingGraph.</p>
+        <p>A Thing is used as a vertice (or node) of a graph with<br>
+            - a unique ID (uuid)<br>
+            - a generic Data property</p>
+        <div class="source">
+            <strong>IThing</strong> {<br>
+            &nbsp;&nbsp; Id Id<br>
+            }<br>
+            <br>
+            <strong>IThing&lt;T&gt;</strong>:IThing {<br>
+            &nbsp;&nbsp; T data<br>
+            }<br>
+        </div>
+        <p>A Link is a labeled edge, and based on IThing. The label, called marker, is a Thing
+            by itself.</p>
+        <div class="source">
+            Limaki.Graph.<strong>IEdge</strong>&lt;T&gt; {<br>
+            &nbsp;&nbsp; T Root<br>
+            &nbsp;&nbsp; T Leaf<br>
+            &nbsp;}<br>
+            <strong>
+                <br />
+                ILink</strong>: Limaki.Graph.IEdge&lt;IThing&gt;, IThing {<br>
+            &nbsp;&nbsp; IThing Marker;<br>
+            }<br>
+        </div>
+        <p>The Marker provides meaningful information about the link (semantics).</p>
+        <p>In other words, a Link is a triple of Things: a Root, a Leaf and a Marker thing.
+            The Root is the described thing (subject), the Leaf is a thing that is somehow related to
+            the Root (object); the marker indicates what kind of relation between root and leaf exists (predicate).</p>
+            <p>Eg. The leaf-thing is the name of the root-thing in case the root-thing is a person; or someone
+            the person knows, etc. etc.</p>
+        
+
+            <p>The definition of a link seem very simple:</p>
+            <ul>
+                <li>a link is a thing</li><li>a link has a root, a leaf and a marker which are things</li></ul>
+            <p>The usage of a link is</p>
+            <ul>
+                <li>the root is a predecessor or parent</li>
+                <li>the leaf is a successor or child</li>
+                <li>the marker is a quality or weight or meaning of a link</li>
+            </ul>
+            <p>The consequences of this design are:</p>
+            <ul>
+                <li>a link can connect links</li>
+                <li>every thing can be a marker</li>
+            </ul>
+
+        
+        <p>The Marker-Things can be defined in Schemes, which
+            are collections of Things used to describe relations between things.</p>
+        
+        <p>A ThingGraph is a Limaki.Graph&lt;IThing&gt;.</p>
+        
+        <p>&nbsp;</p>
+    </div>
+    <div class="menu">
+        <div class="mp">
+            <div class="mp"><a href="ArchitectureOverview.html">Architecture Overview</a></div>
+            <a href="..\index.html">Home</a></div>
+    </div>
+    <div class="footer_container">
+        <div class="footer" style="background-color: white;">
+            <a href="http://sourceforge.net">
+                <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=196119&amp;type=2" alt="SourceForge.net Logo"
+                    border="0" height="37" width="125"></a>
+        </div>
+    </div>
+</body>
+</html>

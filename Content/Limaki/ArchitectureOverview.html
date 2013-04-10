@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>Limada Architecture Overview</title>
+    <link rel="stylesheet" media="screen" href="../LimadaDoku.css" />
+</head>
+<body>
+    <div class="header_container">
+        <div class="header">
+            <h1>Architecture Overview</h1>
+        </div>
+    </div>
+    <div class="content">
+    
+<P><span class="code">Limada</span> is a framework for building
+interactive information visualization applications.</P>
+<P>The design of Limada follows the principle of separation of concerns. 
+Limadas architecture is based on layers. 
+Each layer represents a logical group of components.</P>
+<p>There are four layers in limada:</p>
+        <div style="float: right; margin-left: 1em; margin-bottom: 1em; margin-top: 1em" >
+            <img src="../Diagrams/Limada Architecture Layers.png" style="width: 546px" />
+        </div>
+
+
+<p>The <b>presentation layer</b> contains components for 
+visualizing the model and interacting with the user. This layer is divided into several sublayers:<br/>
+- the Graphics-Layers: this layer provides basic graphic structures like points, rectangles and operations on them. 
+It contains the media to draw like pen, font, color. 
+A Shape is a structure to describe a geometric form. 
+A Style is a composition of medias. 
+A Painter is responsible for rendering a Shape with a given Style to a Surface.<br />
+- the Visuals-Layer: A Visual is a graphic representations of a model-entity. 
+Visuals are composed of a Shape, a Style and a data object. A Scene is a surface where visuals are drawn.
+Visuals are agnostic to a special data model.<br/>
+The core components of the Graphics- and Widget-Layer are independent from a concrete visual framework like GDI or WPF. 
+To realize a presentation layer with a concrete framework a small, framework-specific graphic mapping layer is needed.</p>
+
+<p>The <b>model layer</b> contains Things and Links. 
+A <span class="code">Thing</span> is a vertice (or node) of a graph, a Link connects Things. 
+A ThingGraph acts as a facade to process operations on the entities.</p>
+
+<p>The <b>mapping layer</b> connects the model with the view. 
+This is realized with a <span class="code">GraphPair</span>.<br />
+A GraphPair is a facade on two Graphs of different types, Graph&lt;Widget&gt; and Graph&lt;Thing&gt;. 
+To the presentation layer it appears as a Graph&lt;Widget&gt;, 
+but every operation is performed on the Graph&lt;Thing&gt; too.  
+So a visual abstraction of the model can be done by creating a GraphPair&lt;Widget, Thing&gt;.
+ </P>
+
+<P>The <b>data layer</b> provides Graphs backed by Databases.</P>
+
+   
+</div>
+    <div class="menu">
+<div class="mp"><a href="PresentationLayer.html">Presentation Layer</a></div>
+<div class="mp"><a href="ModelLayer.html">Model Layer</a></div>
+<div class="mp"><a href="MappingLayer.html">Mapping Layer</a></div>
+<div class="mp"><a href="../index.html">Limada</a></div>
+<div class="mp"><a href="http://sourceforge.net/project/showfiles.php?group_id=196119&package_id=260882">Download</a></div>
+    </div>
+    <div class="footer_container">
+        <div class="footer" style="background-color: white;">
+        <a href="http://sourceforge.net"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=196119&amp;type=2" alt="SourceForge.net Logo" border="0" height="37" width="125"></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -15,15 +15,13 @@
 
 <p>The <b>mapping layer</b> connects the model with the view. 
 This is realized with a <span class="code">GraphPair</span>.<br />
-A GraphPair is a facade on two Graphs of different types, Graph&lt;Widget&gt; and Graph&lt;Thing&gt;. 
-To the presentation layer it apperears as a Graph&lt;Widget&gt;, 
-but every operation is performed on the Graph&lt;Thing&gt; too.  
-So a visual abstraction of the model can be done by creating a GraphPair&lt;Widget, Thing&gt;.
+A GraphPair is a facade on two Graphs of different types, <span class="code">Graph&lt;Visual&gt;</span> and <span class="code">Graph&lt;Thing&gt;</span>, where <span class="code">Graph&lt;Visual&gt;</span> is a transformed (Sub)Graph of <span class="code">Graph&lt;Thing&gt;</span>.<br />
+To the presentation layer it apperears as a <span class="code">Graph&lt;Visual&gt;</span>, 
+but every operation is performed on the <span class="code">Graph&lt;Thing&gt;</span> too.  
+So a visual abstraction of the model can be done by creating a <span class="code">GraphPair&lt;Visual, Thing&gt;</span>.
  </P>
- 
 
-
-    </div>
+ </div>
     <div class="menu">
         <div class="mp">
             <div class="mp"><a href="ArchitectureOverview.html">Architecture</a></div>
